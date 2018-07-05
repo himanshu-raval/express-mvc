@@ -1,0 +1,12 @@
+{
+  "name": "express-mvc",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Himanshu Raval",
+  "license": "ISC",
+  "dependencies": {
+   
+  }
+}
