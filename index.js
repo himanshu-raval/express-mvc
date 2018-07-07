@@ -11,6 +11,32 @@ var express = require('express'),
 	MongoClient = require('mongodb').MongoClient;
 
 
+
+/***
+ * Load Middlewares [Create middlewares File in Security->Middlewares Folder And Load Here]
+ * */
+	var middlewares = require("./security/middlewares/frontend"); // Load middlewares File
+	app.use(middlewares.frontRequestCheck); // Middlewares For All Routes
+
+
+
+/***
+ * Load Routs [Create Routes File in Routes Folder And Load Here]
+ * */
+
+
+
+
+	// app.use(function (req, res, next) {
+	// 	console.log('Time:', Date.now())
+	// 	next()
+	// })
+
+	app.use('/', require('./routes/frontend'))
+	app.use('/', require('./routes/backend'))
+
+	
+
 	app.locals.title = 'My App';
 	app.locals.config = require('./config')();
 	app.locals.email = 'me@myapp.com';
@@ -18,8 +44,19 @@ var express = require('express'),
 
 	console.log("Config :",app.locals.config.port);
 
-	let Home = require('./controllers/home');
-	console.log("Home :",Home);
+
+/***
+ * Load Controllers [Create Controllers File in Routes Folder And Load Here]
+ * */
+
+	
+
+
+
+	//let Home = require('./controllers/home');
+	//console.log("Home :",Home);
+
+	
 	// Admin = require('./controllers/Admin'),
 	 
 	// Blog = require('./controllers/Blog'),
@@ -74,11 +111,11 @@ var express = require('express'),
 		// 	Home.run(req, res, next);
 		// });		
 
-		// http.createServer(app).listen(config.port, function() {
+		  http.createServer(app).listen(app.locals.config.port, function() {
 		//   	console.log(
 		//   		'Successfully connected to mongodb://' + config.mongo.host + ':' + config.mongo.port,
 		//   		'\nExpress server listening on port ' + config.port
 		//   	);
-		// });
+		  });
 // 	}
 // });
