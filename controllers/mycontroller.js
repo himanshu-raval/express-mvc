@@ -7,8 +7,10 @@ module.exports = {
        // res.send("hi hr");
         try {
             // const data = await getData({ id: '123' })
-            const data = await MyServes.testServices("Hello");
-            res.status(200).send(data)
+            console.log("hi Before");
+            const data = await MyServes.updateServices("Hello");
+            console.log("hi After");
+            res.status(200).send("Done Saved!")
         } catch (e) {
             //this will eventually be handled by your error handling middleware
             // next(e) 

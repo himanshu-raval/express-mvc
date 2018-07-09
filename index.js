@@ -1,22 +1,31 @@
-
+'use strict';
 /**
  * Module dependencies.
  */
 
-var express = require('express'),
-	http = require('http'), 
-	path = require('path'),
-	//config = require('./config'),
-	app = express(),
-	MongoClient = require('mongodb').MongoClient;
+const express = require('express');
+const	http = require('http');
+const	path = require('path');
+const	config = require('./config');
+const	app = express();
+	//MongoClient = require('mongodb').MongoClient;
+const mongoose = require('mongoose');
+const fs = require('fs');
+const join = require('path').join;
+const db = require('./config/db');
+const models = join(__dirname, 'models');
+// Bootstrap models
+fs.readdirSync(models)
+  .filter(file => ~file.search(/^[^\.].*\.js$/))
+  .forEach(file => require(join(models, file)));
 
 
 
 /***
  * Load Middlewares [Create middlewares File in Security->Middlewares Folder And Load Here]
  * */
-	var middlewares = require("./security/middlewares/frontend"); // Load middlewares File
-	app.use(middlewares.frontRequestCheck); // Middlewares For All Routes
+var middlewares = require("./security/middlewares/frontend"); // Load middlewares File
+app.use(middlewares.frontRequestCheck); // Middlewares For All Routes
 
 
 
@@ -50,6 +59,31 @@ var express = require('express'),
  * */
 
 	
+
+
+
+
+ 
+  listen();
+ 
+
+function listen () {
+  if (app.get('env') === 'test') return;
+  app.listen(app.locals.config.port);
+  console.log('Express app started on port ' + app.locals.config.port);
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -111,11 +145,11 @@ var express = require('express'),
 		// 	Home.run(req, res, next);
 		// });		
 
-		  http.createServer(app).listen(app.locals.config.port, function() {
+		//  http.createServer(app).listen(app.locals.config.port, function() {
 		//   	console.log(
 		//   		'Successfully connected to mongodb://' + config.mongo.host + ':' + config.mongo.port,
 		//   		'\nExpress server listening on port ' + config.port
 		//   	);
-		  });
+		 // });
 // 	}
 // });

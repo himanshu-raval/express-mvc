@@ -1,5 +1,10 @@
+'use strict';
+
 var express = require('express')
   , router = express.Router()
+
+const mongoose = require('mongoose');
+const User = mongoose.model('User');
 
 // Load Controllers  
 var mycont = require('../controllers/mycontroller');
@@ -10,7 +15,17 @@ router.get('/test-controller', async function(req, res) {
 })
 
 router.get('/test',  async function(req, res) {
-  res.send('Audi, BMW, Mercedes')
+
+	User.create({ title: 'shiv_tets' }, function (err, awesome_instance) {
+	  if (err) return res.send(err);
+	  // saved!
+	  console.log("awesome_instance ",awesome_instance);
+	  res.send('Record Saved!');
+
+	});
+
+
+  
 })
 
 // Car models page
