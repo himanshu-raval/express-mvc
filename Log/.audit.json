@@ -1,0 +1,559 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "Log/.audit.json",
+    "files": [
+        {
+            "date": 1531462860008,
+            "name": "Log/game-2018-07-13-11.log",
+            "hash": "bf5e39f10041d15dc1a4b46801811a2c"
+        },
+        {
+            "date": 1531463049906,
+            "name": "Log/game-2018-07-13-11.log",
+            "hash": "8d12068e659f1b7c796e63d0380872dd"
+        },
+        {
+            "date": 1531463068064,
+            "name": "Log/game-2018-07-13-11.log",
+            "hash": "5c33d2fb8be05050d86ade712bfe3ecb"
+        },
+        {
+            "date": 1531463171484,
+            "name": "Log/game-2018-07-13-11.log",
+            "hash": "a5cde3312f5cbab61d68f2858b0f162c"
+        },
+        {
+            "date": 1531464219857,
+            "name": "Log/game-2018-07-13-12.log",
+            "hash": "e9801fbebbfdf22067b55950b962e03a"
+        },
+        {
+            "date": 1531464483951,
+            "name": "Log/game-2018-07-13-12.log",
+            "hash": "ec1405df0c89abe7ee0fb7b830eb402a"
+        },
+        {
+            "date": 1531464658358,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "53d4cd66736d7245e44547dea76de813"
+        },
+        {
+            "date": 1531465772870,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "869ab4d39afe366ddca2e7def6f6501d"
+        },
+        {
+            "date": 1531465955059,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "a22c07d703586ec62dc40094394152d8"
+        },
+        {
+            "date": 1531466002861,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "f8858cdb03c1ddadbf0316c7e81c0f29"
+        },
+        {
+            "date": 1531466023027,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "abd2fe996e3ea92191c707c3539a9f8d"
+        },
+        {
+            "date": 1531466034570,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "54a448a4da6be0908d52d4b0e8b83b1f"
+        },
+        {
+            "date": 1531466095184,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "102efb726ff8953119a81e9979028b2d"
+        },
+        {
+            "date": 1531466128884,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "a2e620283d57f8a5f4063def048e6ab0"
+        },
+        {
+            "date": 1531466150735,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "c48b531a3aacec8ae8204661ccf92318"
+        },
+        {
+            "date": 1531466187966,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "43742b68591ebe056e158e42834d0083"
+        },
+        {
+            "date": 1531466252403,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "5c051473ef9ad7c87977682847d2299b"
+        },
+        {
+            "date": 1531466322381,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "c9ba8c5b5e3b25c3686980730e4fcbb5"
+        },
+        {
+            "date": 1531466339915,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "ce0235bf387c5054763caf5bbc07c3dd"
+        },
+        {
+            "date": 1531466357320,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "2c4447a87fd9d7f4ac98ce797ffe5aef"
+        },
+        {
+            "date": 1531466366645,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "dde7420e566447203d3d02ab28e6e5c7"
+        },
+        {
+            "date": 1531466394939,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "e6d4661eeed67faa972036c2aaa43f11"
+        },
+        {
+            "date": 1531466408223,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "46c8426028343802f62c9d4a1769c7ab"
+        },
+        {
+            "date": 1531466426854,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "5e71e4c06733770574837b78b18cc4c4"
+        },
+        {
+            "date": 1531466439790,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "273b605c46c2ce3fd4eda3525bc288c7"
+        },
+        {
+            "date": 1531466448675,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "875f8ce16dbc34f1322cb354787612d4"
+        },
+        {
+            "date": 1531466461630,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "fa4d923a52b02db23048da6387d94cf2"
+        },
+        {
+            "date": 1531466474627,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "0c29a91eece365dbf17080c2658fb140"
+        },
+        {
+            "date": 1531466519871,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "15466a910dbfb8ad65d34b74b6ad529b"
+        },
+        {
+            "date": 1531466556219,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "9743f82bda2daf37dbb7dde2a77ee253"
+        },
+        {
+            "date": 1531466893895,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "8d95c25c31019159f8233bb1b7455d31"
+        },
+        {
+            "date": 1531466907132,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "1a838a6c19e0ea5303b5494d45660e65"
+        },
+        {
+            "date": 1531466978821,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "b1383c4b83e6cfaf053164edee2ea95e"
+        },
+        {
+            "date": 1531466984739,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "c90674ce47166df749d5687b6e54c386"
+        },
+        {
+            "date": 1531467006439,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "4038005759c5ff56d555dee89b7e64fe"
+        },
+        {
+            "date": 1531467071852,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "cf9ea69615ea5916dc7859e3ee8a29e8"
+        },
+        {
+            "date": 1531467196469,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "6242e39c93a9537b240ba3bba90bbd20"
+        },
+        {
+            "date": 1531467255325,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "3fb2a081f2f5e01de21a0f09128f6e24"
+        },
+        {
+            "date": 1531467385555,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "576c77bd4a49dc496273f5c1675cd72a"
+        },
+        {
+            "date": 1531467407087,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "f7b66e2ea1584d30e53577a45f39a5ae"
+        },
+        {
+            "date": 1531467484400,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "26756bd6b21e5223a4f3044fea130261"
+        },
+        {
+            "date": 1531467508946,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "9f8ad76e10f5e4c047c2eed5471f0aab"
+        },
+        {
+            "date": 1531467532427,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "43ee23ad02da5c679a03b2792ea1a1d5"
+        },
+        {
+            "date": 1531467546712,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "7642fe6cf7cb888e44704efd8b8c9165"
+        },
+        {
+            "date": 1531467562970,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "1e15b8de11b5f2f4658c6c1d72186cca"
+        },
+        {
+            "date": 1531467582487,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "ffd97ebf6e9d84c8b77a0951b7545017"
+        },
+        {
+            "date": 1531467662945,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "4287a507f0172d88cca7c3c876c6036e"
+        },
+        {
+            "date": 1531467740419,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "21bcd21ebea263650934749e8156db71"
+        },
+        {
+            "date": 1531467756134,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "bb94b279a8d956ee264bc7de4666902f"
+        },
+        {
+            "date": 1531467766939,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "6f3e44c3a1b093bfcdf5a4bef0657321"
+        },
+        {
+            "date": 1531467779634,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "4a84dc1fd120a7cf31b7c4ceccafdf97"
+        },
+        {
+            "date": 1531467794388,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "8d32586190045dfc5133cf7bdbc014a6"
+        },
+        {
+            "date": 1531467809218,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "a12bfffa4a4e7b699a8aa6e31bd360bd"
+        },
+        {
+            "date": 1531467842117,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "d2db1fb4bd35a1f2de83afa6bb3930a5"
+        },
+        {
+            "date": 1531467861778,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "4472ab771a666392ba1ff3fc17d73721"
+        },
+        {
+            "date": 1531467909851,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "67007e0fae7c702f1e9532387505a5a3"
+        },
+        {
+            "date": 1531468048542,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "f03d02f0186224519d432c2e93294975"
+        },
+        {
+            "date": 1531468069821,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "7bbb4a007ceba6af26bdadb631ed18b4"
+        },
+        {
+            "date": 1531468109803,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "a56f76d64391e64f361e2d5f6d0661c4"
+        },
+        {
+            "date": 1531468122229,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "9bc8657058bc99f97ca023952466c4e7"
+        },
+        {
+            "date": 1531468147982,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "eede7cdc61038be3b66cf365e962f46d"
+        },
+        {
+            "date": 1531468260950,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "c0d4dff36ec1aa27a2b5eed455d1249b"
+        },
+        {
+            "date": 1531468355049,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "747502b055486b0f81f37f0ad5c97c51"
+        },
+        {
+            "date": 1531468402627,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "b1e63fd26a18a7e3c809b848b9af11f3"
+        },
+        {
+            "date": 1531468533047,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "9768caba6ef1e0f8305df24aa1f1f3e7"
+        },
+        {
+            "date": 1531468578076,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "bdc5c86169c7955191b2e9f8dc498a2d"
+        },
+        {
+            "date": 1531468623196,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "029dee97d9f2afcc006e115e33b71820"
+        },
+        {
+            "date": 1531468714205,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "b528ab82a730aa8e7d8e141d95961f41"
+        },
+        {
+            "date": 1531468749360,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "b8106577b708fd5cef0357db3f7a6a18"
+        },
+        {
+            "date": 1531468887034,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "ac07efbd4af2eccffc4bde6962d374a1"
+        },
+        {
+            "date": 1531474113005,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "7e4baf282a0a09e0d87ea1827a6b669c"
+        },
+        {
+            "date": 1531474968375,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "e310735e4ace2538d27e230c561020f3"
+        },
+        {
+            "date": 1531474986990,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "2f10de549e73d2d1a45565f4f6ac47d1"
+        },
+        {
+            "date": 1531475798351,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "31d6e9e69b20908c476ff1317798e0f7"
+        },
+        {
+            "date": 1531475825546,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "57f7fa1c967b1633d92a2b558f343940"
+        },
+        {
+            "date": 1531475864007,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "6a2588377636b0e260b2ad648823c1ed"
+        },
+        {
+            "date": 1531475892141,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "8c5d6b7c9e548df60ac93234820c4f34"
+        },
+        {
+            "date": 1531475906094,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "0871294ec3dd49d4c66b3f474d4f2742"
+        },
+        {
+            "date": 1531476145482,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "3d2c98175715dab45961e43113dbab9d"
+        },
+        {
+            "date": 1531476167547,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "c5aee652bdebc38f4d1ee25f277537b9"
+        },
+        {
+            "date": 1531476194371,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "30a67aff5b4d16e3f243aab3e5ea195e"
+        },
+        {
+            "date": 1531476352198,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "827cc1e6e90d6bacb8823eb8cfaca194"
+        },
+        {
+            "date": 1531476365885,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "22ea6b6cad651fa11cd85aad6e8a54d3"
+        },
+        {
+            "date": 1531476386271,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "96908e4fcfb10416d5b31c824447dffd"
+        },
+        {
+            "date": 1531476434855,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "42f6e1376b731cdfe08044f910d4ebd5"
+        },
+        {
+            "date": 1531476448319,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "172e9265fb82bc052f14e0a50fb9c052"
+        },
+        {
+            "date": 1531476537800,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "6084cc6c43eed34015b4c18f5b42ab2a"
+        },
+        {
+            "date": 1531476573302,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "54317b216867745e07fbabff7fc96556"
+        },
+        {
+            "date": 1531476621891,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "1c9d9e9666f8570ecdb556c3de8181ab"
+        },
+        {
+            "date": 1531476628289,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "3213ebbd1a181792aed32314ff71fcc3"
+        },
+        {
+            "date": 1531476638906,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "99f0e6130a354cf42a88d32b4dc5933b"
+        },
+        {
+            "date": 1531476646157,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "a8d445454f5ed1ce8a137dac4d75903b"
+        },
+        {
+            "date": 1531476659068,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "b1f859d594fdd60e524e7e9e6c3a6817"
+        },
+        {
+            "date": 1531476691456,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "83c6002a50a4c87662d38aec30ea1dae"
+        },
+        {
+            "date": 1531476706453,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "f512699d97fa72be06d5db51d979904e"
+        },
+        {
+            "date": 1531476719407,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "0d2ce07f88ee0f9606edbf514cd0f56c"
+        },
+        {
+            "date": 1531476730818,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "fb55fb1bb6282dca99c7b537d383cc7a"
+        },
+        {
+            "date": 1531476741005,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "fe02537568b5f5e77260ca08a335f358"
+        },
+        {
+            "date": 1531476782388,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "492be7220c255e476b6481ec8a4a6bb0"
+        },
+        {
+            "date": 1531476817428,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "b4c0268c1ceafea6cce3d0d0091258cf"
+        },
+        {
+            "date": 1531476824647,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "241d8f53b53842eaf826e4a4eda85afc"
+        },
+        {
+            "date": 1531476830020,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "554261a37414f45710e8b9e4ba67ef25"
+        },
+        {
+            "date": 1531476851203,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "88728063818dacbb039abca5409a0000"
+        },
+        {
+            "date": 1531476890043,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "93e824456f96553ec8731ab829d8975b"
+        },
+        {
+            "date": 1531476929747,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "5f6e98328324369220b38f9d47ce8a53"
+        },
+        {
+            "date": 1531476982459,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "fb2044ceedb97cf2aefc98b6d4e06206"
+        },
+        {
+            "date": 1531476987147,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "51db9be5465aae4506baabffe4f594c5"
+        },
+        {
+            "date": 1531476990124,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "cd4af9a5ef2caa7fb7a34d9b39386fc4"
+        },
+        {
+            "date": 1531476994120,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "f9559320b676b48bd34a9ae98e51b266"
+        },
+        {
+            "date": 1531476998109,
+            "name": "Log/game-13-07-2018.log",
+            "hash": "b4d6d2f38bac7b7d4353c699ab364dfb"
+        }
+    ]
+}

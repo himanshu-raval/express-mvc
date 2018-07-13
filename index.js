@@ -2,30 +2,61 @@
 /**
  * Module dependencies.
  */
+// var server = require('./config/server');
+// server.Rooms = [];
+// server.Rooms[123]  = { name : "Himanshu" };
+
+require('./Boot/Server');
+
+var Game = require('./Boot/Game');
+ 
+//console.log("Game Rooms ->",Game.Config.Database.local);
+
+
 
 const express = require('express');
 const	http = require('http');
 const	path = require('path');
 const	config = require('./config');
-const	app = express();
+//const	app = express();
 	//MongoClient = require('mongodb').MongoClient;
 const mongoose = require('mongoose');
 const fs = require('fs');
 const join = require('path').join;
 const db = require('./config/db');
 const models = join(__dirname, 'models');
-// Bootstrap models
-fs.readdirSync(models)
+
+ 
+
+
+
+// var sizeof = require('object-sizeof');
+
+// function intervalFunc() {
+//   console.log("Size : ",sizeof(server.Rooms[123]));
+//   console.log('My Current Value :',server.Rooms[123]);
+// }
+
+// setInterval(intervalFunc, 1500);
+
+
+
+
+
+
+// Load models
+fs.readdirSync(join(__dirname, 'game/Socket'))
   .filter(file => ~file.search(/^[^\.].*\.js$/))
-  .forEach(file => require(join(models, file)));
+  .forEach(file => require(join(join(__dirname, 'game/Socket'), file)));
+
 
 
 
 /***
  * Load Middlewares [Create middlewares File in Security->Middlewares Folder And Load Here]
  * */
-var middlewares = require("./security/middlewares/frontend"); // Load middlewares File
-app.use(middlewares.frontRequestCheck); // Middlewares For All Routes
+//var middlewares = require("./security/middlewares/frontend"); // Load middlewares File
+//Game.App.use(middlewares.frontRequestCheck); // Middlewares For All Routes
 
 
 
@@ -41,18 +72,17 @@ app.use(middlewares.frontRequestCheck); // Middlewares For All Routes
 	// 	next()
 	// })
 
-	app.use('/', require('./routes/frontend'))
-	app.use('/', require('./routes/backend'))
-
 	
 
-	app.locals.title = 'My App';
-	app.locals.config = require('./config')();
-	app.locals.email = 'me@myapp.com';
+	
+console.log("Hellow ");
+	// app.locals.title = 'My App';
+	// app.locals.config = require('./config')();
+	// app.locals.email = 'me@myapp.com';
 
 
-	console.log("Config :",app.locals.config.port);
-
+	//console.log("Config :",app.locals.config.port);
+ //let gameserver = require('http').Server(app);
 
 /***
  * Load Controllers [Create Controllers File in Routes Folder And Load Here]
@@ -61,22 +91,52 @@ app.use(middlewares.frontRequestCheck); // Middlewares For All Routes
 	
 
 
+// var io = require('socket.io')(gameserver);
+
+//  gameserver.listen(app.locals.config.port,function(err){
+//  	console.log('Express app started on port ' + app.locals.config.port);	
 
 
+// 		io.on('connection', function (socket) {
+// 			console.log("Express");
+// 		 // socket.emit('news', { hello: 'world' });
+// 		//  socket.on('my other event', function (data) {
+// //console.log(data);
+// 		 // });
+// 		});
+
+
+//  });
+//   listen();
  
-  listen();
- 
 
-function listen () {
-  if (app.get('env') === 'test') return;
-  app.listen(app.locals.config.port);
-  console.log('Express app started on port ' + app.locals.config.port);
-}
+// function listen () {
+//   if (app.get('env') === 'test') return;
+//   app.listen(app.locals.config.port,function(err){
 
- 
+//   	console.log('Express app started on port ' + app.locals.config.port);	
 
+// 		io.on('connection', function (socket) {
+// 			console.log("Express");
+// 		 // socket.emit('news', { hello: 'world' });
+// 		//  socket.on('my other event', function (data) {
+// //console.log(data);
+// 		 // });
+// 		});
 
+//   });
+  
+// }
 
+//   http.createServer(app).listen(app.locals.config.port, function() {
+// 		  	 io.on('connection', function (socket) {
+// 			console.log("Express");
+// 		 // socket.emit('news', { hello: 'world' });
+// 		//  socket.on('my other event', function (data) {
+// //console.log(data);
+// 		 // });
+// 		});
+// 		 });
 
 
 

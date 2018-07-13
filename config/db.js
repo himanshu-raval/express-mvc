@@ -13,7 +13,6 @@ var dbOPtion =   {
   bufferMaxEntries: 0,
     useNewUrlParser: true,
     poolSize: 2,
-     
     promiseLibrary: global.Promise
   }
 
