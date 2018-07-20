@@ -45,9 +45,10 @@ const models = join(__dirname, 'models');
 
 
 // Load models
-fs.readdirSync(join(__dirname, 'game/Socket'))
-  .filter(file => ~file.search(/^[^\.].*\.js$/))
-  .forEach(file => require(join(join(__dirname, 'game/Socket'), file)));
+
+
+
+
 
 
 
@@ -75,7 +76,7 @@ fs.readdirSync(join(__dirname, 'game/Socket'))
 	
 
 	
-console.log("Hellow ");
+//console.log("Hellow ");
 	// app.locals.title = 'My App';
 	// app.locals.config = require('./config')();
 	// app.locals.email = 'me@myapp.com';

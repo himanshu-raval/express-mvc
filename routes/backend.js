@@ -5,10 +5,10 @@ var express = require('express')
 var middlewares = require("../security/middlewares/mycustom");
 
 
-router.get('/backend',middlewares.cutomCheck, function(req, res) {
+// router.get('/backend',middlewares.cutomCheck, function(req, res) {
 
 	
-  res.send('This is Backend')
-})
+//   res.send('This is Backend')
+// })
 
 module.exports = router
