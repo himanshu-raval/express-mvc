@@ -6,27 +6,32 @@ const PlayerSchema = new Schema({
 				required: true
 			},
 			appid: {
-				type: 'string'
+				type: 'string',
+				default: ''
 			},
 			username: {
 				type: 'string',
-				required: true
+				default: ''
+				//required: true
 			},
 			firstname: {
 				type: 'string',
+				default: ''
 				// required: true
 			},
 			lastname: {
 				type: 'string',
+				default: ''
 				// required: true
 			},
 			// profilePic: {
 			// 	type: 'string',
 			// 	required: true
 			// },
-			isFbProfile: {
+			isFb: {
 				type: 'boolean',
-				required: true
+				default: false
+				//required: true
 			},
 			profilePicId: {
 				type: 'string',
@@ -34,21 +39,26 @@ const PlayerSchema = new Schema({
 				// required: true
 			},
 			fbProfileUrl: {
-				type: 'string'
+				type: 'string',
+				default: ''
 				// required: true
 			},
 			email: {
-				type: 'string'
+				type: 'string',
+				default: ''
 			},
 			password: {
-				type: 'string'
+				type: 'string',
+				default: ''
 			},
 			mobile: {
 				type: 'string',
+				default: ''
 				// required: true
 			},
 			gender: {
 				type: 'string',
+				default: ''
 				// required: true
 			},
 			chips: {
@@ -68,15 +78,19 @@ const PlayerSchema = new Schema({
 				default: 'inactive'
 			},
 			sessionId: {
-				type: 'string'
+				type: 'string',
+				default: ''
 			},
 			socketId: {
-				type: 'string'
+				type: 'string',
+				default: ''
 			},
 			rating: {
 				type: 'number',
 				default: 0
-			}
+			},
+			updatedAt : { type: Date, default: Date.now() },
+			createdAt : { type: Date, default: Date.now() }
 },{ collection: 'player' });
 mongoose.model('player', PlayerSchema);
  

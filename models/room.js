@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const RoomSchema = new Schema({
             name          : { type: 'string', required: true },
 		tableNumber   : { type: 'string', required: true },
-		dealerId		  : { type: 'number', required: true },
+		dealer		  : { type: 'number', required: true },
             smallBlind    : { type: 'number', required: true },
 		// minBet    		: { type: 'number', required: true },
             // maxBet	      : { type: 'number', required: true },

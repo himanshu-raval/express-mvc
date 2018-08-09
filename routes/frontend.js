@@ -1,5 +1,14 @@
 'use strict';
 
+
+var Coinpayments = require('coinpayments');
+ 
+var options = {
+	'key' : 'bdb559cadbc6e06d7dd38de5c2213e873345cb52a2237ad5c60bec7684d6bb46',
+	 'secret' :'0cF5263D459A81364398e77e8b9b12005EefFB73a0d64524C7E38dEcDe713bc8'
+};
+let client = new Coinpayments(options); 
+
 var express = require('express')
   , router = express.Router()
 
@@ -10,6 +19,27 @@ const Room = mongoose.model('room');
 var mycont = require('../controllers/mycontroller');
   
 
+
+
+router.get('/coinpayment', async function(req, res) {
+  client.createTransaction({
+				'currency1' : 'LTC',
+				'currency2' : 'LTC',
+				'amount' : 2.123
+	 }, await function(err,result){
+					if(err) {
+							console.log(err); 
+					}
+					 console.log(result);
+					 return res.send({result : result});
+		});
+});
+
+
+
+
+
+
 //var server = require('../config/server');
 
 // console.log("Rooms Show ->",Game.Rooms);
@@ -17,6 +47,10 @@ var mycont = require('../controllers/mycontroller');
 //  Game.Rooms[123] = {
 //  	City : "Ahemdabad"
 //  };
+
+router.get('/', async function(req, res) {
+	res.render('index.html');
+});
 
 router.get('/test-controller', async function(req, res) {
   mycont.test(req, res);

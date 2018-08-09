@@ -17,26 +17,26 @@ class Room {
     this.bootAmount = bootAmount;
 
     //Track the dealer position between games
-    this.dealer = 0;
+    this.dealer = dealer;
     if (dealer) {
-      this.dealer = dealer;
+      //this.dealer = dealer;
     }
-    this.players = [];
+    this.players = players;
     if (players && Array.isArray(players)) {
       // console.log(players); return false;
-      players.forEach(function (player) {
-        player.room = room
-        room.players.push(load('Games/Teenpatti/Entities/Player', player))
-      })
+      // players.forEach(function (player) {
+      //   player.room = room
+      //   room.players.push(load('Games/Teenpatti/Entities/Player', player))
+      // })
     }
 
     this.waitingPlayers = [];
     if (waitingPlayers && Array.isArray(waitingPlayers)) {
       // console.log(players); return false;
-      waitingPlayers.forEach(function (player) {
-        player.room = room
-        room.waitingPlayers.push(load('Games/Teenpatti/Entities/Player', player))
-      })
+      // waitingPlayers.forEach(function (player) {
+      //   player.room = room
+      //   room.waitingPlayers.push(load('Games/Teenpatti/Entities/Player', player))
+      // })
     }
 
     this.gameWinners = [];
@@ -46,20 +46,20 @@ class Room {
 
     this.gameLosers = [];
     if (gameLosers) {
-      console.log('gameLosers.forEach', gameLosers);
-      gameLosers.forEach(function (player) {
-        player.room = room
-        room.gameLosers.push(load('Games/Teenpatti/Entities/Player', player))
-      })
+      // console.log('gameLosers.forEach', gameLosers);
+      // gameLosers.forEach(function (player) {
+      //   player.room = room
+      //   room.gameLosers.push(load('Games/Teenpatti/Entities/Player', player))
+      // })
     }
-    this.turnBet = {};
+    this.turnBet = turnBet;
     if (turnBet) {
-      room.turnBet = turnBet
+     // room.turnBet = turnBet
     }
     // other variables
     this.game = null
     if (game) {
-      this.game = load('Games/Teenpatti/Entities/Game', game)
+      //this.game = load('Games/Teenpatti/Entities/Game', game)
     }
     this.currentPlayer = currentPlayer
     this.rackPercent = rackPercent
@@ -68,19 +68,21 @@ class Room {
     this.owner = owner
     this.tableNumber = tableNumber
 
-    //Validate acceproom value ranges.
-    var err;
-    if (minPlayers < 2) { //require at least two players to start a game.
-      err = new Error(101, 'Parameter [minPlayers] must be a postive integer of a minimum value of 2.');
-    } else if (maxPlayers > 10) { //hard limit of 10 players at a room.
-      err = new Error(102, 'Parameter [maxPlayers] must be a positive integer less than or equal to 10.');
-    } else if (minPlayers > maxPlayers) { //Without this we can never start a game!
-      err = new Error(103, 'Parameter [minPlayers] must be less than or equal to [maxPlayers].');
-    }
+    this.isFull = isFull
 
-    if (err) {
-      return err;
-    }
+    //Validate acceproom value ranges.
+    // var err;
+    // if (minPlayers < 2) { //require at least two players to start a game.
+    //   err = new Error(101, 'Parameter [minPlayers] must be a postive integer of a minimum value of 2.');
+    // } else if (maxPlayers > 10) { //hard limit of 10 players at a room.
+    //   err = new Error(102, 'Parameter [maxPlayers] must be a positive integer less than or equal to 10.');
+    // } else if (minPlayers > maxPlayers) { //Without this we can never start a game!
+    //   err = new Error(103, 'Parameter [minPlayers] must be less than or equal to [maxPlayers].');
+    // }
+
+    // if (err) {
+    //   return err;
+    // }
   }
 
   static createObject(room) {

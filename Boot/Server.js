@@ -6,7 +6,7 @@ var fs = require('fs');
 var join = require('path').join;
 var path      = require("path");
 var mongoose = require( 'mongoose' ); 
-
+var nunjucks = require('nunjucks')
 
 
 var db = require('../config/db');
@@ -20,6 +20,14 @@ var Game  = new require('../Boot/Game');
 
 
 Game.App = express();
+
+nunjucks.configure('views', {
+    autoescape: true,
+    express: Game.App
+});
+
+
+ 
 
 Game.Server = require('http').Server(Game.App);
 
@@ -199,12 +207,11 @@ mongoose.connection.on('connected', async function () {
 	 Game.Log.info('Loading... Socket');
 	 Game.Io.on('connection', function(socket) {
 		Game.Log.info('Some One Connected :'+socket.id);
-
-			Object.keys(Game.ThreeCards).forEach(function(){
-					Object.keys(Game.ThreeCards.Sockets).forEach(function(key){
-						Game.ThreeCards.Sockets[key](socket)
-					})
-			})
+ 
+				Object.keys(Game.ThreeCards.Sockets).forEach(function(key){ // Register Socket File in Socket Variable
+					Game.ThreeCards.Sockets[key](socket)
+				})
+		 
 
 		// fs.readdirSync(join(__dirname, '../game/Socket'))
 	 //  	.filter(file => ~file.search(/^[^\.].*\.js$/))
@@ -214,7 +221,16 @@ mongoose.connection.on('connected', async function () {
 
  
 	Game.Server.listen(Game.Config.Socket.port,function() {
-		Game.Log.info('Server Start.... Port :'+Game.Config.Socket.port);
+		Game.App.use(function(req, res, next) {
+			res.render('404.html');
+		});
+		console.log("(---------------------------------------------------------------)");
+		console.log(" |                    Server Started...                        |");
+		console.log(" |                  http://"+Game.Config.Database[Game.Config.Database.connectionType].mongo.host+":"+Game.Config.Socket.port+"                      |");
+		console.log("(---------------------------------------------------------------)");
+
+
+		//Game.Log.info('Server Start.... Port :'+Game.Config.Socket.port);
 	});
 
 }); 
