@@ -41,7 +41,7 @@ class Room {
 
     this.gameWinners = [];
     if (gameWinners) {
-      room.gameWinners = gameWinners
+     // room.gameWinners = gameWinners
     }
 
     this.gameLosers = [];
@@ -512,6 +512,8 @@ class Room {
 
  async AddPlayer(channel, id, socketId, playerName, profilePicId, chips, seatIndex,bot) {
 
+  console.log("Add Player Called");
+
     var room = this
     // if (chips >= minBet) {
       var player = {
@@ -613,92 +615,92 @@ class Room {
       } 
 
       // When Players Lenght is 1
-      if(playersLength == 1 && room.owner != 'club' && 1 != 1){
-        console.log("Playesr Length is 1 So We Use BOT");
-       // load('Games/Teenpatti/Controllers/Logical/RoomController').timers[room.id] = setTimeout(async function (room) {
+      // if(playersLength == 1 && room.owner != 'club' && 1 != 1){
+      //   console.log("Playesr Length is 1 So We Use BOT");
+      //  // load('Games/Teenpatti/Controllers/Logical/RoomController').timers[room.id] = setTimeout(async function (room) {
 
-          // playersLength = 0;
-          // room.players.forEach(function (player) {
-          //   if (player.status != 'Left') {
-          //     playersLength += 1;
-          //   }
-          // })
-          // room.waitingPlayers.forEach(function (player) {
-          //   if (player.status != 'Left') {
-          //     playersLength += 1;
-          //   }
-          // })
+      //     // playersLength = 0;
+      //     // room.players.forEach(function (player) {
+      //     //   if (player.status != 'Left') {
+      //     //     playersLength += 1;
+      //     //   }
+      //     // })
+      //     // room.waitingPlayers.forEach(function (player) {
+      //     //   if (player.status != 'Left') {
+      //     //     playersLength += 1;
+      //     //   }
+      //     // })
 
-         // if(playersLength == 1 && room.owner != 'club'){
+      //    // if(playersLength == 1 && room.owner != 'club'){
 
-            var PlayerName = ['Herry','Krey','Jay','Rover','Smith','Jems','Bril','Ronaldo'];
-            var name1 = Math.floor(Math.random() * 7) + 0;
-            var NamePlr1 = PlayerName[name1];
-            var index = PlayerName.indexOf(NamePlr1);
-            if (index > -1) {
-              PlayerName.splice(index, 1);
-            }
-            var name2 = Math.floor(Math.random() * 6) + 0;
-            var NamePlr2 = PlayerName[name2];
-            // Player Sit
-            var array = [0,1,2,3,4,5,6];
-            index = array.indexOf(seatIndex);
-            if (index > -1) {
-              array.splice(index, 1);
-            }
-            let plr1seatIndex = array[Math.floor(Math.random()*array.length)];
-            index = array.indexOf(plr1seatIndex);
-            if (index > -1) {
-              array.splice(index, 1);
-            }
+      //       var PlayerName = ['Herry','Krey','Jay','Rover','Smith','Jems','Bril','Ronaldo'];
+      //       var name1 = Math.floor(Math.random() * 7) + 0;
+      //       var NamePlr1 = PlayerName[name1];
+      //       var index = PlayerName.indexOf(NamePlr1);
+      //       if (index > -1) {
+      //         PlayerName.splice(index, 1);
+      //       }
+      //       var name2 = Math.floor(Math.random() * 6) + 0;
+      //       var NamePlr2 = PlayerName[name2];
+      //       // Player Sit
+      //       var array = [0,1,2,3,4,5,6];
+      //       index = array.indexOf(seatIndex);
+      //       if (index > -1) {
+      //         array.splice(index, 1);
+      //       }
+      //       let plr1seatIndex = array[Math.floor(Math.random()*array.length)];
+      //       index = array.indexOf(plr1seatIndex);
+      //       if (index > -1) {
+      //         array.splice(index, 1);
+      //       }
 
-            var chips1 = Math.floor(Math.random()*(6000-2000+1)+2000);
-            var chips2 = Math.floor(Math.random()*(6000-2000+1)+2000);
+      //       var chips1 = Math.floor(Math.random()*(6000-2000+1)+2000);
+      //       var chips2 = Math.floor(Math.random()*(6000-2000+1)+2000);
 
-            let plr2seatIndex = array[Math.floor(Math.random()*array.length)];
+      //       let plr2seatIndex = array[Math.floor(Math.random()*array.length)];
     
-            var player1 = {
-              id: load('Iniv/Config').get('teenpatti.bot1Id'),
-              socketId: 'NoSocketID',
-              playerName: NamePlr1,
-              profilePicId: '5',
-              // fb_avatar: fb_avatar,
-              status: 'Waiting',
-              chips: chips1,
-              room: this,
-              seatIndex: plr1seatIndex,
-              blind: true,
-              bot : true
-            }
-            var player2 = {
-              id: load('Iniv/Config').get('teenpatti.bot2Id'),
-              socketId: 'NoSocketID',
-              playerName: NamePlr2,
-              profilePicId: '5',
-              // fb_avatar: fb_avatar,
-              status: 'Waiting',
-              chips: chips2,
-              room: this,
-              seatIndex: plr2seatIndex,
-              blind: true,
-              bot : true
-            }
-            var playerObj1 = load('Games/Teenpatti/Entities/Player', player1);
-            // console.log(player);
-            room.waitingPlayers.push(playerObj1);
+      //       var player1 = {
+      //         id: load('Iniv/Config').get('teenpatti.bot1Id'),
+      //         socketId: 'NoSocketID',
+      //         playerName: NamePlr1,
+      //         profilePicId: '5',
+      //         // fb_avatar: fb_avatar,
+      //         status: 'Waiting',
+      //         chips: chips1,
+      //         room: this,
+      //         seatIndex: plr1seatIndex,
+      //         blind: true,
+      //         bot : true
+      //       }
+      //       var player2 = {
+      //         id: load('Iniv/Config').get('teenpatti.bot2Id'),
+      //         socketId: 'NoSocketID',
+      //         playerName: NamePlr2,
+      //         profilePicId: '5',
+      //         // fb_avatar: fb_avatar,
+      //         status: 'Waiting',
+      //         chips: chips2,
+      //         room: this,
+      //         seatIndex: plr2seatIndex,
+      //         blind: true,
+      //         bot : true
+      //       }
+      //       var playerObj1 = load('Games/Teenpatti/Entities/Player', player1);
+      //       // console.log(player);
+      //       room.waitingPlayers.push(playerObj1);
             
-            await load('Iniv/Ws').channel('/').inRoom(room.id).emit('PlayerInfo', playerObj1.toJson());
+      //       await load('Iniv/Ws').channel('/').inRoom(room.id).emit('PlayerInfo', playerObj1.toJson());
 
-            let plr2 = await room.AddPlayer(channel, load('Iniv/Config').get('teenpatti.bot2Id'), 'NoSocketID', NamePlr2, '3', chips2, plr2seatIndex,true);
-            var playerObj2 = load('Games/Teenpatti/Entities/Player', player2);
-            await load('Iniv/Ws').channel('/').inRoom(room.id).emit('PlayerInfo', playerObj2.toJson());
+      //       let plr2 = await room.AddPlayer(channel, load('Iniv/Config').get('teenpatti.bot2Id'), 'NoSocketID', NamePlr2, '3', chips2, plr2seatIndex,true);
+      //       var playerObj2 = load('Games/Teenpatti/Entities/Player', player2);
+      //       await load('Iniv/Ws').channel('/').inRoom(room.id).emit('PlayerInfo', playerObj2.toJson());
 
-        //}
+      //   //}
 
 
 
-      // },3000,room);
-      }
+      // // },3000,room);
+      // }
    
     }
     return room;

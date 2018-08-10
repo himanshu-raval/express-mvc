@@ -46,6 +46,14 @@ module.exports = {
             console.log("Erro",e);
         }
     },
+    getById: async function(id){
+        console.log('Find   ID:',id)
+        try {
+            return  await player.findOne({ '_id': id });
+        } catch (e) {
+            console.log("Erro",e);
+        }
+    },
     getByAppId: async function(appId){
         console.log('Find App ID:',appId)
         try {

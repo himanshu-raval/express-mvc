@@ -17,9 +17,19 @@ module.exports = function (Socket) {
    
 
     Socket.on("SubscribeChipsRoom", async function(data,responce) {
+        console.log('data->',data)
         responce(await Game.ThreeCards.Controllers.RoomController.subscribeChipsRoom(Socket,data)); 
     });
 
+
+    Socket.on("JoinRoom", async function(data,responce) {
+        console.log('JoinRoom->',data)
+        responce(await Game.ThreeCards.Controllers.RoomController.joinRoom(Socket,data)); 
+    });
+
+
+
+ 
 
    
     Socket.on("test", function(data,res) {

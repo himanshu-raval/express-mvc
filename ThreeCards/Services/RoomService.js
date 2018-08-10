@@ -22,7 +22,7 @@ module.exports = {
 		data.owner = 'admin';
 		data.tableNumber = 'TP1';
 		data.dealer = 0;
-		data.club = [];
+		data.club = null;
 		data.isFull = false;
 		data.players = [];
 		data.waitingPlayers = [];
@@ -49,13 +49,18 @@ module.exports = {
 		// // console.log(room); return false;
 		// self.rooms[room.id] = load('Games/Teenpatti/Entities/Room',newRoom);
 		// return self.rooms[room.id];
+
 		console.log('Save----------');
 		try{
 			let room = new roomEntities(null, data.name, data.smallBlind, data.minPlayers, data.maxPlayers, data.minBuyIn, data.maxBuyIn, data.type, data.isLimitGame, data.status, data.dealer, data.players, data.waitingPlayers, data.gameWinners, data.gameLosers, data.turnBet, data.game, data.currentPlayer,data.rackPercent,data.expireTime,data.owner,data.tableNumber, data.isFull, data.club, data.bootAmount);
+
 		    let roomSave = new roomModel(room);
-		     room = roomSave.save();
-		     room = new roomEntities(room.id, room.name, room.smallBlind, room.minPlayers, room.maxPlayers, room.minBuyIn, room.maxBuyIn, room.type, room.isLimitGame, room.status, room.dealer, room.players, room.waitingPlayers, room.gameWinners, room.gameLosers, room.turnBet, room.game, room.currentPlayer,room.rackPercent,room.expireTime,room.owner,room.tableNumber, room.isFull, room.club, room.bootAmount);
-		 	return room;
+		    room = await roomSave.save(); // Save Room
+
+		     Game.Rooms[room.id]  = new roomEntities(room.id, room.name, room.smallBlind, room.minPlayers, room.maxPlayers, room.minBuyIn, room.maxBuyIn, room.type, room.isLimitGame, room.status, room.dealer, room.players, room.waitingPlayers, room.gameWinners, room.gameLosers, room.turnBet, room.game, room.currentPlayer,room.rackPercent,room.expireTime,room.owner,room.tableNumber, room.isFull, room.club, room.bootAmount); // Save room in Game object
+
+		 	return Game.Rooms[room.id]; // return Room 
+
 		  } catch (err){
 		    if (err.name === 'MongoError' && err.code === 11000) {
 		    	// Special For Mongoose Error
@@ -82,18 +87,24 @@ module.exports = {
         }
 	},
 	get: async function(id){
-        console.log('Find By Data:',id)
+        console.log('Find By id:',id)
         try {
+        	console.log('Game.Rooms[id]=',Game.Rooms[id]);
 			if(Game.Rooms[id]){
+				console.log("Room Available in Game Object");
 				return Game.Rooms[id];
 			}else{
-				var room = await roomModel.findOne(id);
-				Game.Rooms[room.id] = await load('Games/Teenpatti/Entities/Room',room);
+				console.log("Room Not Available in Game Object");
+				var room = await roomModel.findOne({'_id' :id});
+
+
+				 Game.Rooms[room.id]  = new roomEntities(room.id, room.name, room.smallBlind, room.minPlayers, room.maxPlayers, room.minBuyIn, room.maxBuyIn, room.type, room.isLimitGame, room.status, room.dealer, room.players, room.waitingPlayers, room.gameWinners, room.gameLosers, room.turnBet, room.game, room.currentPlayer,room.rackPercent,room.expireTime,room.owner,room.tableNumber, room.isFull, room.club, room.bootAmount); // Save room in Game object
+
 				return Game.Rooms[room.id];
 			}
 	 
         } catch (e) {
-            console.log("Error",e);
+            console.log("Error in Get",e);
         }
 	},
 

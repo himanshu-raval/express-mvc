@@ -12,10 +12,10 @@ const RoomSchema = new Schema({
             maxPlayers    : { type: 'number', required: true },
             minBuyIn      : { type: 'number' },
             maxBuyIn      : { type: 'number' },
-            gps      : { type: 'boolean' },
-            ip      : { type: 'boolean' },
+            gps           : { type: 'boolean' },
+            ip            : { type: 'boolean' },
 			// tableNumber   : { type: 'string', required: true },
-            isFull			  : { type: 'boolean', required: true },
+            isFull	  : { type: 'boolean', required: true },
 			// maxPot			  : { type: 'number', required: true },
             rackPercent   : { type: 'number' },
             // rackAmount    : { type: 'number' },
@@ -24,16 +24,19 @@ const RoomSchema = new Schema({
             owner         : { type: 'string' }, // admin or user
             isLimitGame   : { type: 'boolean' },
             currentPlayer : { type: 'number', allowNull: true },
-		players       : { type: 'string' },
-            waitingPlayers: { type: 'string' },
-            gameWinners   : { type: 'string' },
-            gameLosers    : { type: 'string' },
-            turnBet       : { type: 'string' },
+		players       : { type: 'array' },
+            waitingPlayers: { type: 'array' },
+            gameWinners   : { type: 'array' },
+            gameLosers    : { type: 'array' },
+            turnBet       : { type: 'array'  },
             status        : { type: 'string' }, // closed for deleted rooms
             game          : [{ type: Schema.Types.ObjectId, ref: 'game' }],
-		club		  :	[{ type: Schema.Types.ObjectId, ref: 'user' }],
-		bootAmount	  :	{ type: 'number', required: true }
-	},{ collection: 'room' });
+		club		  : [{ type: Schema.Types.ObjectId, ref: 'user' }],
+		bootAmount	  : { type: 'number', required: true }
+	},{ 
+            collection: 'room',
+            versionKey: false
+      });
 mongoose.model('room', RoomSchema);
 
  
