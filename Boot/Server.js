@@ -6,8 +6,10 @@ var fs = require('fs');
 var join = require('path').join;
 var path      = require("path");
 var mongoose = require( 'mongoose' ); 
-var nunjucks = require('nunjucks')
-
+var nunjucks = require('nunjucks');
+var session = require('express-session');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser')
 
 var db = require('../config/db');
 var routes = join(__dirname, '../routes');
@@ -21,18 +23,30 @@ var Game  = new require('../Boot/Game');
 
 Game.App = express();
 
+/**
+ * 
+ */
+
+// parse application/x-www-form-urlencoded
+Game.App.use(bodyParser.urlencoded({ extended: false }))
+ 
+// parse application/json
+Game.App.use(bodyParser.json())
+
+
+
+/**
+ * Set Public Folder
+ */
+Game.App.use(express.static('public')); 
+
+
 nunjucks.configure('views', {
     autoescape: true,
     express: Game.App
 });
 
-
- 
-
 Game.Server = require('http').Server(Game.App);
-
-
-
 
 Game.Config = new Array();
 fs.readdirSync(join(__dirname, '../Config'))
@@ -40,6 +54,16 @@ fs.readdirSync(join(__dirname, '../Config'))
   .forEach(function(file) {
   	Game.Config[file.split('.')[0]] = require(join(join(__dirname, '../Config'), file))
 }); 
+
+
+/**
+ * Session Express
+ */
+
+Game.App.use(session({ 
+	secret: Game.Config.App.session.secret, 
+	cookie: { maxAge: Game.Config.App.session.maxAge }
+}));
 
  
 // Logger Load 

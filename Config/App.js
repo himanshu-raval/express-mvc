@@ -5,6 +5,12 @@ module.exports = {
 		logFilePrefix : 'game',
 
 	},
-
+	gameName : "Three Cards Game",
+	
+	// Session Setting.
+	session : {
+		secret : 'Ther$#%CrDSJKS#@d',
+		maxAge : 60000
+	}
 	
 }
